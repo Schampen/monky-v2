@@ -1,0 +1,41 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #acda9d;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    color: #0F0A06;
+    font-size: 1.1em;
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Merriweather';
+}
+
+form {
+    font-family: 'Alegreya Sans', sans-serif; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #acda5d;
+}
+
+.interestbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border-radius: 12px;
+}
+
+.gdpr {
+    font-size: 0.9em;
+}
