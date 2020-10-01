@@ -4,19 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Emails;
+use Illuminate\Support\Facades\Validator;
 
 class EmailsController extends Controller
 {
-    public function store()
+    public function store(Request $request)
     {
-        request()->validate([
-            'email' => 'required'
+        $validator = Validator::make($request->all(),[
+            'email' => 'required|unique:emails'
         ]);
-        
+
+        if ($validator->fails()) {
+            $registered = false;
+            return redirect(url()->previous() .'#form')
+                    ->withErrors($validator)
+                    ->withInput();
+        }
+
         $emails = new Emails();
         $emails->email = request('email');
         $emails->save();
 
-        return redirect('/');
+        return redirect('/')->with('registered');
     }
 }

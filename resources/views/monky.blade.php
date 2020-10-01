@@ -51,7 +51,6 @@
             with updates of the product. Your information will be removed from our databases when the product no longer is for
             sale or if you would want it removed beforehand.</p>
     </form>
-
     <div class="w-100 d-flex justify-content-center">
         <img class="img-fluid" src="bild/closeup.jpg" alt="close up of monky">
     </div>
